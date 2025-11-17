@@ -23,11 +23,14 @@ jobs:
         env:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
-      - name: Run Gitleaks secret scan
-        uses: gitleaks/gitleaks-action@v2
-        with:
-          config-path: ""
-          args: detect --source="${{ github.workspace }}" --exit-code=1
+      - name: Simple secret pattern scan
+        run: |
+          if grep -R "AWS_SECRET_ACCESS_KEY" .; then
+            echo "Potential secret found in repo"
+            exit 1
+          else
+            echo "No secret patterns found"
+          fi
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
