@@ -64,7 +64,7 @@ jobs:
             const body = `
 Security pipeline failed.
 
-Check
+Check:
 - Gitleaks report
 - Trivy vulnerability report
 
