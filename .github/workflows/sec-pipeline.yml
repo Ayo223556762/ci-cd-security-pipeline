@@ -24,9 +24,10 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
       - name: Run Gitleaks secret scan
-        run: |
-          docker run --rm -v ${{ github.workspace }}:/repo zricethezav/gitleaks:latest \
-            detect -s /repo --report-format sarif --report-path gitleaks-results.sarif --exit-code 1
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          config-path: ""
+          args: detect --source="${{ github.workspace }}" --exit-code=1
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
