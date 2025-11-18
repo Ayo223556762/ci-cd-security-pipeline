@@ -34,7 +34,7 @@ This completes the CI/CD workflow: detect, validate, build, and deliver.
 
 ---
 
-## 🛠️ Tools and Technologies
+## 🛠️ Tools and Technologies Used
 
 - GitHub Actions (CI/CD automation)  
 - Docker  
@@ -98,7 +98,7 @@ If security checks pass:
 
 ---
 
-## 📸 Recommended Screenshots to Add
+## 📸 Screenshots
 
 - Successful CI/CD run  
 - Failed CI run  
@@ -113,14 +113,14 @@ If security checks pass:
 
 ## 💡 Why This Project Matters
 
-This project showcases hands on capability in:
+This project showcases hands-on capability in:
 
 - DevSecOps  
 - Security automation  
 - CI/CD pipeline design  
 - Vulnerability management  
 - Secret detection  
-- Cloud ready container delivery  
+- Cloud-ready container delivery  
 - SOC alerting workflows  
 
 Recruiters and engineers can clearly see:
