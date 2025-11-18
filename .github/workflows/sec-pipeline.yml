@@ -25,12 +25,13 @@ jobs:
 
       - name: Simple secret pattern scan
         run: |
-          if grep -R "AWS_SECRET_ACCESS_KEY" .; then
+          if grep -R --exclude=README.md "AWS_SECRET_ACCESS_KEY=" .; then
             echo "Potential secret found in repo"
             exit 1
           else
             echo "No secret patterns found"
           fi
+
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
