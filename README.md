@@ -109,6 +109,9 @@ If security checks pass:
 - VS Code project structure  
 - AWS ECR image listing
 
+📸 **Screenshots Folder:**  
+👉 [Click here to view all screenshots](./screenshots/)
+
 ---
 
 ## 💡 Why This Project Matters
